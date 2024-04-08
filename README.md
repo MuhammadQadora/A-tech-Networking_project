@@ -8,11 +8,11 @@ To get started:
 
 
 # Usage:
-Connect to the bastion/public instance.
+   Connect to the bastion/public instance.
 -  ./bastion_connect.sh <PUBLIC_INSTANCE_IP>
-Connect to private instance/vm.
+   Connect to private instance/vm.
 -  ./bastion_connect.sh <PUBLIC_INSTANCE_IP> <PRIVATE_INSTANCE_IP>
-Execute command on private instance.
+   Execute command on private instance.
 -  ./bastion_connect.sh <PUBLIC_INSTANCE_IP> <PRIVATE_INSTANCE_IP> '<YOUR_COMMAND_GOES_HERE>'
 
 # Performing Key Rotaion:
