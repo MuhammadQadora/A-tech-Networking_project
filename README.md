@@ -7,17 +7,17 @@ To get started:
    chmod u+x bastion_connect.sh
 
 
-Usage:
-# connect to the bastion/public instance.
+# Usage:
+Connect to the bastion/public instance.
 -  ./bastion_connect.sh <PUBLIC_INSTANCE_IP>
-# Connect to private instance/vm.
+Connect to private instance/vm.
 -  ./bastion_connect.sh <PUBLIC_INSTANCE_IP> <PRIVATE_INSTANCE_IP>
-# Execute command on private instance.
+Execute command on private instance.
 -  ./bastion_connect.sh <PUBLIC_INSTANCE_IP> <PRIVATE_INSTANCE_IP> '<YOUR_COMMAND_GOES_HERE>'
 
-Performing Key Rotaion:
-# By doing this, you will successfuly perform an ssh-key rotation without breaking the bastion_connect.sh
-# connect to the bastion/public instance.
+# Performing Key Rotaion:
+By doing this, you will successfuly perform an ssh-key rotation without breaking the bastion_connect.sh
+Connect to the bastion/public instance.
 1)  ./bastion_connect.sh <PUBLIC_INSTANCE_IP>
 2)  bash ssh_keys_rotation.sh <PRIVATE_INSTANCE_IP>
 3) continue using the bastion_connect.sh like before.
