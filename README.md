@@ -1,23 +1,36 @@
 # A-tech-networking_project
 
-*  A bash script to connect to a private virtual machine.
+A bash script to connect to a private virtual machine.
 
-To get started:
--  Turn the bastion_connect.sh into an executable by running:
-   chmod u+x bastion_connect.sh
+## Getting Started
 
+To make `bastion_connect.sh` executable, run the following command:
 
-# Usage:
-*   Connect to the bastion/public instance.
--  ./bastion_connect.sh <PUBLIC_INSTANCE_IP>
-*   Connect to private instance/vm.
--  ./bastion_connect.sh <PUBLIC_INSTANCE_IP> <PRIVATE_INSTANCE_IP>
-*   Execute command on private instance.
--  ./bastion_connect.sh <PUBLIC_INSTANCE_IP> <PRIVATE_INSTANCE_IP> '<YOUR_COMMAND_GOES_HERE>'
+```bash
+chmod u+x bastion_connect.sh
+```
+# Usage
+```bash
+Connect to the bastion/public instance:
+./bastion_connect.sh <PUBLIC_INSTANCE_IP>
 
-# Performing Key Rotaion:
-*   By doing this, you will successfuly perform an ssh-key rotation without breaking the bastion_connect.sh
-*   Connect to the bastion/public instance.
-1)  ./bastion_connect.sh <PUBLIC_INSTANCE_IP>
-2)  bash ssh_keys_rotation.sh <PRIVATE_INSTANCE_IP>
-3) continue using the bastion_connect.sh like before.
+Connect to a private instance/vm:
+./bastion_connect.sh <PUBLIC_INSTANCE_IP> <PRIVATE_INSTANCE_IP>
+
+Execute a command on a private instance:
+./bastion_connect.sh <PUBLIC_INSTANCE_IP> <PRIVATE_INSTANCE_IP> '<YOUR_COMMAND_GOES_HERE>'
+```
+# Performing Key Rotation
+```bash
+Perform an SSH key rotation seamlessly without affecting bastion_connect.sh:
+
+Connect to the bastion/public instance:
+./bastion_connect.sh <PUBLIC_INSTANCE_IP>
+
+Execute the SSH keys rotation script:
+bash ssh_keys_rotation.sh <PRIVATE_INSTANCE_IP>
+
+Continue using bastion_connect.sh as before.
+
+Just replace `<PUBLIC_INSTANCE_IP>` and `<PRIVATE_INSTANCE_IP>` with the actual IP addresses and `<YOUR_COMMAND_GOES_HERE>` with the command you wish to execute on the private instance. Enjoy your project!
+```
